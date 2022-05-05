@@ -1,17 +1,23 @@
 import "./App.css";
 import Footer from "./Componenets/Footer/Footer";
 import Navbar from "./Componenets/Navbar/Navbar";
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Componenets/HomePages/Home";
 import About from "./Componenets/HomePages/About";
 import Service from "./Componenets/HomePages/Service";
 import Blog from "./Componenets/HomePages/Blog";
 import Contact from "./Componenets/HomePages/Contact";
+import { useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
-  const name = ["Mirzayev Asqar"]
-  const profile = ['Frontend developer']
-  const email = ["asqarmirzayev2@gmail.com"]
-  const phone = ["+99 890 094 08 20"]
+  const name = ["Mirzayev Asqar"];
+  const profile = ["Frontend developer"];
+  const email = ["asqarmirzayev2@gmail.com"];
+  const phone = ["+99 890 094 08 20"];
+
+  const [loader, setLoader] = useState(true);
+
   return (
     <>
       <div className="">
@@ -23,7 +29,6 @@ function App() {
         <Contact phone={phone} email={email} />
         <Footer name={name} />
       </div>
-
     </>
     // <BrowserRouter>
     //   <Navbar />
