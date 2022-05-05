@@ -1,0 +1,33 @@
+.bg_footer {
+  background-image: url("https://wallpapercave.com/wp/wp2757874.gif");
+  color: gainsboro;
+  background-size: 100% 100%;
+  width: 100%;
+  height: auto;
+}
+.bg_fon {
+  background-color: rgb(32, 31, 31);
+  color: white;
+  text-align: center;
+}
+.bg_footer .react {
+  color: white;
+  font-size: 60px;
+}
+.bg_footer .ul {
+  margin: 0;
+  padding: 0;
+}
+.bg_footer .ul .li {
+  list-style: none;
+  line-height: 3;
+}
+.bg_footer a {
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid gray;
+}
+.bg_footer .github {
+  font-size: 20px;
+}
