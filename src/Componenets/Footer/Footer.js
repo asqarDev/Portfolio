@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { RiReactjsLine } from "react-icons/ri";
 import { AiOutlineRight } from "react-icons/ai";
+import ScrollToTop from "react-scroll-to-top";
 export default function Footer({ name }) {
   return (
     <div className="footer">
@@ -64,9 +65,10 @@ export default function Footer({ name }) {
           </div>
         </div>
       </div>
-      <div className="bg_fon py-2">
+      <div className="bg_fon py-4">
         <p className="mb-0">@2022 Copyright {name}. All Rights Reserved </p>
       </div>
+      <ScrollToTop smooth top="100" color="#0078ff" />
     </div>
   );
 }

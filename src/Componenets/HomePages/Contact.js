@@ -1,6 +1,6 @@
 import React from "react";
 import { GoLocation } from "react-icons/go";
-import { FiSmartphone } from "react-icons/fi";
+import { FiSmartphone, FiYoutube } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaTelegram, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { Maps } from "./Maps";
@@ -14,8 +14,12 @@ export default function Contact({ phone, email }) {
           </div>
           <div className="container my-5">
             <div className="row p-4">
-              <div className="col-lg-6 col-md-6">
-                <div className="">
+              <div
+                className="col-lg-6 col-md-6"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+              >
+                <div className="py-5">
                   <h2>Send Message Us</h2>
                   <div className="linechiziq"></div>
                   <div className="form my-4">
@@ -65,7 +69,11 @@ export default function Contact({ phone, email }) {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-6 my-5">
+              <div
+                className="col-lg-6 col-md-6 my-5"
+                data-aos="zoom-in-up"
+                data-aos-duration="2000"
+              >
                 <div className="">
                   <h2>Get in Touch</h2>
                   <div className="linechiziq"></div>
@@ -94,30 +102,33 @@ export default function Contact({ phone, email }) {
                   </div>
                   <div className="boglanish ">
                     <div className="tarmoqlar">
-                      <a className="" href="#">
+                      <a className="" href="https://t.me/Mirzayev_14">
                         <h2>
                           <FaTelegram className="fatarmoq" />
                         </h2>
                       </a>
                     </div>
                     <div className="tarmoqlar">
-                      <a className="" href="#">
+                      <a className="" href="https://instagram.com/dasturchi_14">
                         <h2>
                           <FaInstagram className="fatarmoq" />
                         </h2>
                       </a>
                     </div>
                     <div className="tarmoqlar">
-                      <a className="" href="#">
+                      <a className="" href="https://facebook.com/asqar.mirzaye">
                         <h2>
                           <FaFacebook className="fatarmoq" />
                         </h2>
                       </a>
                     </div>
                     <div className="tarmoqlar">
-                      <a className="" href="#">
+                      <a
+                        className=""
+                        href="https://www.youtube.com/watch?v=dPLleyn5kE4&list=PL-mivq7XpsPauPDFeznwdYpsGIIxJ5_6o"
+                      >
                         <h2>
-                          <FaTwitter className="fatarmoq" />
+                          <FiYoutube className="fatarmoq" />
                         </h2>
                       </a>
                     </div>
@@ -130,7 +141,7 @@ export default function Contact({ phone, email }) {
         </div>
       </div>
       <div className="xarita container-fluid p-0 m-0">
-        <div className="maps">
+        <div className="maps" data-aos="zoom-in" data-aos-duration="2000">
           <Maps />
         </div>
       </div>

@@ -3,8 +3,8 @@ import React from "react";
 import "./Global.css";
 
 import Typed from "react-typed";
-export default function Home() {
-  const name = ["Men Mirzayev Asqar"];
+export default function Home({name}) {
+  
   return (
     <div className="home" id="home">
       <div className="bg_home">

@@ -1,19 +1,43 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { FaTimes, FaBars, FaCode } from "react-icons/fa";
 
 const Navbar = () => {
   const [modal, setModal] = useState(false);
+  const [navSize, setnavSize] = useState("10rem");
+  const [navColor, setnavColor] = useState("transparent");
+  const listenScrollEvent = () => {
+    window.scrollY > 10
+      ? setnavColor("rgba(41, 38, 38, 0.9)")
+      : setnavColor("transparent");
+    window.scrollY > 10 ? setnavSize("5rem") : setnavSize("7rem");
+  };
+
   const showModal = () => {
     setModal(!modal);
   };
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
   const logo = ["AsqarDev"];
   return (
-    <div className="header px-3">
+    <div
+      className="header px-3"
+      style={{
+        backgroundColor: navColor,
+        height: navSize,
+        transition: "all 1s",
+      }}
+    >
       <div className="menu-icon">
         <div className="logo">
-          <h2 className="">Logo</h2>
+          <h4 className="">
+            <FaCode className="" /> <b> {logo}</b>
+          </h4>
         </div>
         <FaBars className="menu" onClick={showModal} />
       </div>
@@ -54,9 +78,12 @@ const Navbar = () => {
             </a>
           </li>
           <li className="mygreen" onClick={showModal}>
-            <a className="aa" href="#2">
+            <a className="aa" href="#3">
               Log in
             </a>
+            {/* <NavLink className="aa" to="/login">
+              Log in
+            </NavLink> */}
           </li>
         </ul>
       </nav>
