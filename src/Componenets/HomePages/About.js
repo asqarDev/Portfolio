@@ -5,6 +5,8 @@ import Slider from "react-slick";
 import { FiYoutube } from "react-icons/fi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { FaTelegram, FaInstagram, FaFacebook } from "react-icons/fa";
+import dateFormat, { masks } from "dateformat";
+const now = new Date();
 export default function About({ name, profile, email, phone, data }) {
   var settings = {
     dots: true,
@@ -49,7 +51,7 @@ export default function About({ name, profile, email, phone, data }) {
       <div className="about_top"></div>
       <h1 className="text-center mt-5">About Me</h1>
       <div
-        className="container my-5"
+        className="container my-5 mycontainer"
         data-aos="zoom-in"
         data-aos-duration="2000"
       >
@@ -86,6 +88,10 @@ export default function About({ name, profile, email, phone, data }) {
                   </div>
                 </div>
               </div>
+            </div>
+            <div>
+              <h5 className="text-center"> {dateFormat(now)}</h5>
+              {/*  Sat Jun 09 2007 17:46:21 */}
             </div>
             <div className="" style={{ border: "none" }}>
               <h6>Skill</h6>
@@ -184,7 +190,7 @@ export default function About({ name, profile, email, phone, data }) {
         <Slider {...settings}>
           {data.map((item) => (
             <div>
-              <div className="card p-2 mx-1 sliderlar">
+              <div className=" p-2 mx-1 sliderlar">
                 <div className="card-header p-0">
                   <img
                     width="100%"

@@ -4,7 +4,31 @@ import { FiSmartphone, FiYoutube } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaTelegram, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { Maps } from "./Maps";
-export default function Contact({ phone, email }) {
+export default function Contact({
+  phone,
+  email,
+  toastClick,
+  toastClick2,
+  maps,
+}) {
+  const getForPost = () => {
+    var name = document.querySelector("#name").value;
+    var email = document.querySelector("#email").value;
+    var subject = document.querySelector("#subject").value;
+    var message = document.querySelector("#message").value;
+    if (
+      name.length > 0 &&
+      email.length > 0 &&
+      subject.length > 0 &&
+      message.length > 0
+    ) {
+      toastClick();
+      console.log(name);
+    } else {
+      toastClick2();
+    }
+  };
+
   return (
     <div className="contact" id="contact">
       <div className="bg_contact">
@@ -12,7 +36,7 @@ export default function Contact({ phone, email }) {
           <div className="">
             <h1 className="text-center pt-5">Contact</h1>
           </div>
-          <div className="container my-5">
+          <div className="container my-5 mycontainer">
             <div className="row p-4">
               <div
                 className="col-lg-6 col-md-6"
@@ -28,40 +52,44 @@ export default function Contact({ phone, email }) {
                         <input
                           type="text"
                           class="form-control"
-                          id="floatingInput"
+                          id="name"
                           placeholder="name@example.com"
                         />
-                        <label for="floatingInput">Your Name</label>
+                        <label for="name">Your Name</label>
                       </div>
                       <div class="form-floating mb-3">
                         <input
                           type="email"
                           class="form-control"
-                          id="floatingInput"
+                          id="email"
                           placeholder="name@example.com"
                         />
-                        <label for="floatingInput">Your Email</label>
+                        <label for="email">Your Email</label>
                       </div>
                       <div class="form-floating mb-3">
                         <input
                           type="text"
                           class="form-control"
-                          id="floatingInput"
+                          id="subject"
                           placeholder="name@example.com"
                         />
-                        <label for="floatingInput">Subject</label>
+                        <label for="subject">Subject</label>
                       </div>
                       <div class="form-floating">
                         <textarea
                           rows={10}
                           class="form-control"
                           placeholder="Leave a comment here"
-                          id="floatingTextarea"
+                          id="message"
                         ></textarea>
-                        <label for="floatingTextarea">Message</label>
+                        <label for="message">Message</label>
                       </div>
                       <div className="text-center">
-                        <button className="btn btn-primary mt-3" type="button">
+                        <button
+                          className="btn btn-primary mt-3"
+                          type="reset"
+                          onClick={getForPost}
+                        >
                           Send Message{" "}
                         </button>
                       </div>
@@ -85,19 +113,25 @@ export default function Contact({ phone, email }) {
                       esse laboriosam ratione nobis mollitia inventore?
                     </p>
                   </div>
-                  <div>
+                  <div className="manzillar">
                     <p className="">
                       {" "}
-                      <GoLocation className="geoLocation" /> Tashkent shahar
-                      Chilonzor Tumani C kvartl 12-dom 77 uy
+                      <a href={maps} className="" target="_blanck">
+                        <GoLocation className="geoLocation" /> Tashkent shahar
+                        Chilonzor Tumani C kvartl 12-dom 77 uy
+                      </a>
                     </p>
                     <p className="">
                       {" "}
-                      <FiSmartphone className="geoLocation" /> {phone}
+                      <a href={"tel:" + { phone }}>
+                        <FiSmartphone className="geoLocation" /> {phone}
+                      </a>
                     </p>
                     <p className="">
                       {" "}
-                      <AiOutlineMail className="geoLocation" /> {email}
+                      <a href={"mailto:" + { email }}>
+                        <AiOutlineMail className="geoLocation" /> {email}
+                      </a>
                     </p>
                   </div>
                   <div className="boglanish ">

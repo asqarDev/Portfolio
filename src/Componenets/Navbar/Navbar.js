@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { FaTimes, FaBars, FaCode } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = (getLogin) => {
   const [modal, setModal] = useState(false);
   const [navSize, setnavSize] = useState("10rem");
   const [navColor, setnavColor] = useState("transparent");
@@ -78,12 +78,12 @@ const Navbar = () => {
             </a>
           </li>
           <li className="mygreen" onClick={showModal}>
-            <a className="aa" href="#3">
+            {/* <a className="aa" href="#3" onClick={getLogin}>
               Log in
-            </a>
-            {/* <NavLink className="aa" to="/login">
+            </a> */}
+            <NavLink className="aa" to="/login">
               Log in
-            </NavLink> */}
+            </NavLink>
           </li>
         </ul>
       </nav>

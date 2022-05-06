@@ -6,12 +6,15 @@
   background-position: center 25%;
   width: 100%;
   height: 100vh;
+  color: white;
+}
+.home .bg_home .container .row {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  width: 100%;
+  height: 100vh;
 }
-
 /* about css code */
 
 .about {
@@ -19,12 +22,15 @@
   height: auto;
   background-color: #f5f5f5;
 }
-.about .container {
+.about .mycontainer {
   background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.about .sliderlar{
+.about .sliderlar {
   height: 550px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .about .sliderlar img {
   cursor: pointer;
@@ -67,12 +73,12 @@
   align-items: center;
 }
 .about .tarmoqlar {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #0078ff;
+  border: 3px solid #0078ff;
   border-radius: 50%;
   /* padding: 4px;
   box-sizing: border-box; */
@@ -204,7 +210,7 @@
   height: 4px;
   background-color: #0078ff;
 }
-.contact .container {
+.contact .mycontainer {
   background-color: white;
   color: black;
 }
@@ -258,6 +264,14 @@
 .contact .xarita .maps {
   border-bottom-right-radius: 890px;
   overflow: hidden;
+}
+.contact .manzillar a {
+  color: black;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+.contact .manzillar a:hover {
+  color: #0078ff;
 }
 .contact .xarita {
 }

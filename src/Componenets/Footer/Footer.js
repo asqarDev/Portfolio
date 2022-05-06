@@ -60,6 +60,12 @@ export default function Footer({ name }) {
                     Github account
                   </a>
                 </p>
+                <p className="github">
+                  Github <i> </i>{" "}
+                  <a target="_blanck" href="https://github.com/AbrorjonDev">
+                    Github account
+                  </a>
+                </p>
               </div>
             </div>
           </div>

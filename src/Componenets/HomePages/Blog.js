@@ -5,7 +5,8 @@ import { BiTimeFive } from "react-icons/bi";
 import scratch from "./../../img/scratch.png";
 import frontend from "./../../img/frontend.jpg";
 import backend from "./../../img/backend.jpg";
-export default function Blog({ name }) {
+import { Link } from "react-router-dom";
+export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
   return (
     <div className="blog" id="blog">
       <div className="container my-5">
@@ -48,9 +49,9 @@ export default function Blog({ name }) {
                   egestas non nisi.
                 </p>
                 <p className="text-center">
-                  <a href="#" className="btn btn-primary ">
+                  <button className="btn btn-primary " onClick={toastClick}>
                     Go somewhere
-                  </a>
+                  </button>
                 </p>
               </div>
               <div className="card-footer d-flex justify-content-between align-items-center">
@@ -93,9 +94,9 @@ export default function Blog({ name }) {
                   egestas non nisi.
                 </p>
                 <p className="text-center">
-                  <a href="#" className="btn btn-primary ">
+                  <button onClick={toastClick1} className="btn btn-primary ">
                     Go somewhere
-                  </a>
+                  </button>
                 </p>
               </div>
               <div className="card-footer d-flex justify-content-between align-items-center">
@@ -138,9 +139,9 @@ export default function Blog({ name }) {
                   egestas non nisi.
                 </p>
                 <p className="text-center">
-                  <a href="#" className="btn btn-primary ">
+                  <button onClick={toastClick2} className="btn btn-primary ">
                     Go somewhere
-                  </a>
+                  </button>
                 </p>
               </div>
               <div className="card-footer d-flex justify-content-between align-items-center">
@@ -154,6 +155,11 @@ export default function Blog({ name }) {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+        <div>
+          <div className="text-center">
+            <Link className="btn btn-primary py-3 px-5" to='/pagination'>New Page</Link>
           </div>
         </div>
       </div>

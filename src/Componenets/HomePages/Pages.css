@@ -1,0 +1,16 @@
+.page .tableId {
+  width: 70px !important;
+  background-color: #0078ff;
+  color: white;
+}
+.page .tableTr {
+  background-color: #0078ff;
+  color: white;
+}
+.page .TableLoader {
+  width: 100% !important;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
