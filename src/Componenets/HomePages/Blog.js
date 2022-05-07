@@ -8,7 +8,7 @@ import backend from "./../../img/backend.jpg";
 import { Link } from "react-router-dom";
 export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
   return (
-    <div className="blog" id="blog">
+    <div className="blog my-5" id="blog">
       <div className="container my-5">
         <div className="text-center">
           <h1>BLOG</h1>
@@ -40,9 +40,7 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
                 <span class="badge bg-primary ">Frontend</span>
               </p>
               <div class="card-body py-0 ">
-                <h4 class="card-title text-center">
-                  See more ideas about Travel
-                </h4>
+                <h4 class="card-title text-center">Frontend projects</h4>
                 <p class="card-text">
                   Proin eget tortor risus. Pellentesque in ipsum id orci porta
                   dapibus. Praesent sapien massa, convallis a pellentesque nec,
@@ -50,7 +48,7 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
                 </p>
                 <p className="text-center">
                   <button className="btn btn-primary " onClick={toastClick}>
-                    Go somewhere
+                    Frontend start
                   </button>
                 </p>
               </div>
@@ -85,9 +83,7 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
                 <span class="badge bg-primary ">Backend</span>
               </p>
               <div class="card-body py-0 ">
-                <h4 class="card-title text-center">
-                  See more ideas about Travel
-                </h4>
+                <h4 class="card-title text-center">Backend projects</h4>
                 <p class="card-text">
                   Proin eget tortor risus. Pellentesque in ipsum id orci porta
                   dapibus. Praesent sapien massa, convallis a pellentesque nec,
@@ -95,7 +91,7 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
                 </p>
                 <p className="text-center">
                   <button onClick={toastClick1} className="btn btn-primary ">
-                    Go somewhere
+                    Backend start
                   </button>
                 </p>
               </div>
@@ -130,23 +126,25 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
                 <span class="badge bg-primary ">Scratch</span>
               </p>
               <div class="card-body py-0 ">
-                <h4 class="card-title text-center">
-                  See more ideas about Travel
-                </h4>
+                <h4 class="card-title text-center">Scratch projects</h4>
                 <p class="card-text">
                   Proin eget tortor risus. Pellentesque in ipsum id orci porta
                   dapibus. Praesent sapien massa, convallis a pellentesque nec,
                   egestas non nisi.
                 </p>
                 <p className="text-center">
-                  <button onClick={toastClick2} className="btn btn-primary ">
-                    Go somewhere
-                  </button>
+                  <Link
+                    to="/scratch"
+                    onClick={toastClick2}
+                    className="btn btn-primary "
+                  >
+                    Scratch games start
+                  </Link>
                 </p>
               </div>
               <div className="card-footer d-flex justify-content-between align-items-center">
                 <div className="imgCardFooter ">
-                  <img className="" src={imgCardFooter} />
+                  <img className="" src={imgCardFooter} alt="images" />
                 </div>
                 <h6 className="mb-0">{name}</h6>
                 <p className="mb-0 d-flex justify content-berween align-items-center">
@@ -159,7 +157,9 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
         </div>
         <div>
           <div className="text-center">
-            <Link className="btn btn-primary py-3 px-5" to='/pagination'>New Page</Link>
+            <Link className="btn btn-primary py-3 px-5" to="/pagination">
+              New Page
+            </Link>
           </div>
         </div>
       </div>

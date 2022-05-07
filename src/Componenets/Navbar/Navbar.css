@@ -127,7 +127,7 @@
     top: 0;
     background-color: rgb(26, 23, 23);
     transition: 0.5s ease;
-    z-index: 2;
+    z-index: 22;
   }
   .slider .medialogo {
     display: none;

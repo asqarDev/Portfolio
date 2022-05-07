@@ -3,6 +3,7 @@ import React from "react";
 import "./Global.css";
 import profile from "./../../img/profileImg.png";
 import Typed from "react-typed";
+import Texnalogiyalar from "./Texnalogiyalar";
 export default function Home({ name }) {
   return (
     <div className="home" id="home">
@@ -26,24 +27,15 @@ export default function Home({ name }) {
                     loop={true}
                   />
                 </h3>
+                <h6 className="text-center mt-3">
+                  <button className="box mt-4">Button</button>
+                </h6>
               </div>
             </div>
-            {/* <div className="col-lg-6">
-              <div>
-                <div className="">
-                  <img
-                    width="100%"
-                    height="100%"
-                    src={profile}
-                    className="card-img-top"
-                    alt="Profile img"
-                  />
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
+      <Texnalogiyalar />
     </div>
   );
 }

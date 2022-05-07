@@ -30,7 +30,7 @@ function App() {
   const name = ["Mirzayev Asqar"];
   const profile = ["Frontend developer"];
   const email = ["asqarmirzayev2@gmail.com"];
-  const phone = ["+99 890 094 08 20"];
+  const phone = '+998900940820';
   const maps = [
     "https://www.google.com/maps/place/%D0%A7%D0%B8%D0%BB%D0%BE%D0%BD%D0%B7%D0%BE%D1%80+%D0%BC%D0%B5%D1%82%D1%80%D0%BE/@41.275873,69.2010873,17z/data=!3m1!4b1!4m5!3m4!1s0x38ae8a22d8b4347d:0x18b72c3133debcf4!8m2!3d41.275869!4d69.203276",
   ];

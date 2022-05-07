@@ -6,6 +6,7 @@ import { FiYoutube } from "react-icons/fi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { FaTelegram, FaInstagram, FaFacebook } from "react-icons/fa";
 import dateFormat, { masks } from "dateformat";
+import Youtube from "./Youtube";
 const now = new Date();
 export default function About({ name, profile, email, phone, data }) {
   var settings = {
@@ -47,7 +48,7 @@ export default function About({ name, profile, email, phone, data }) {
     ],
   };
   return (
-    <div className="about pb-5" id="about">
+    <div className="about pb-5 my-5" id="about">
       <div className="about_top"></div>
       <h1 className="text-center mt-5">About Me</h1>
       <div
@@ -246,6 +247,8 @@ export default function About({ name, profile, email, phone, data }) {
           ))}
         </Slider>
       </div>
+
+      <Youtube />
     </div>
   );
 }

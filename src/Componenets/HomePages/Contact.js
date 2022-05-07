@@ -30,7 +30,7 @@ export default function Contact({
   };
 
   return (
-    <div className="contact" id="contact">
+    <div className="contact pt-5" id="contact">
       <div className="bg_contact">
         <div className="opasiti">
           <div className="">
