@@ -7,7 +7,7 @@ import "./Global.css";
 import CountUp from "react-countup";
 export default function Service({ profile }) {
   return (
-    <div className="services my-5" id="service">
+    <div className="services" id="service">
       <div className="container my-5">
         <div className="text-center">
           <h1>SERVICES</h1>

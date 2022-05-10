@@ -43,7 +43,7 @@ const Navbar = (getLogin) => {
       </div>
       <nav className={modal ? "slider active" : "slider"}>
         <div className="medialogo">
-          <h4 className="">
+          <h4 className="mx-3">
             <FaCode className="coder" /> <b> {logo}</b>
           </h4>
         </div>

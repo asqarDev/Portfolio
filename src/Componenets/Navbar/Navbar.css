@@ -6,7 +6,7 @@
   overflow: hidden;
   width: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   font-family: "DM Sans", sans-serif;
   color: white;
   position: fixed;
@@ -117,8 +117,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
+}
+.header h4 {
+  color: white;
 }
 @media only screen and (max-width: 992px) {
+  .header {
+    padding-top: 20px;
+  }
   .slider {
     position: fixed;
     min-width: 100%;
@@ -144,6 +151,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 8px;
+    /* transform: translateY(-80px); */
   }
   .slider ul li {
     margin-block: 2rem;
@@ -170,8 +180,9 @@
     display: flex;
     color: #fff;
     cursor: pointer;
-    padding: 12px;
+    padding: 22px;
     width: 100%;
+    top: 0;
     justify-content: flex-end;
   }
   .closed .close {

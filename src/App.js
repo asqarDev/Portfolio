@@ -16,9 +16,10 @@ import CircleLoader from "react-spinners/CircleLoader";
 import devImg from "./img/devImg.jpg";
 import dostlar from "./img/IMG_20210222_124702.jpg";
 import men from "./img/man.jpg";
+import sher from './img/sher.jpg'
 import bgImg from './img/bg_img.jpg'
-import bgNo from './img/bg_no1.png'
-
+import bgNo from './img/AbrorjonPro.jpeg'
+import 'antd/dist/antd.css';
 import { toast } from "react-toastify";
 const override = css`
   display: block;
@@ -71,7 +72,7 @@ function App() {
       age: 22,
       yonalishi: "IOS",
       kasbi: "Dasturchi",
-      imgUrl: dostlar,
+      imgUrl: sher,
       telegram: "sher_abdulxamidov1",
       instagram: "sher_abdulxamidov1",
     },
@@ -80,7 +81,7 @@ function App() {
       age: 21,
       yonalishi: "Backend",
       kasbi: "Dasturchi",
-      imgUrl: men,
+      imgUrl: bgNo,
       telegram: "AbrorjonAxmadov",
       instagram: "axmadov_abrorjon",
     },
@@ -108,7 +109,7 @@ function App() {
       age: 22,
       yonalishi: "IOS",
       kasbi: "Dasturchi",
-      imgUrl: dostlar,
+      imgUrl: sher,
       telegram: "sher_abdulxamidov1",
       instagram: "sher_abdulxamidov1",
     },

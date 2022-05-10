@@ -48,7 +48,7 @@ export default function About({ name, profile, email, phone, data }) {
     ],
   };
   return (
-    <div className="about pb-5 my-5" id="about">
+    <div className="about pb-5" id="about">
       <div className="about_top"></div>
       <h1 className="text-center mt-5">About Me</h1>
       <div
@@ -265,7 +265,7 @@ function SampleNextArrow(props) {
         boxShadow: "0px 0px 7px rgba(0,0,0,0.5)",
         color: "white",
         position: "absolute",
-        zIndex: "1",
+        zIndex: "0",
         right: "-12px",
         bottom: "calc(50% - 12px)",
         width: "35px",

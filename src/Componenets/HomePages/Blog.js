@@ -8,7 +8,7 @@ import backend from "./../../img/backend.jpg";
 import { Link } from "react-router-dom";
 export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
   return (
-    <div className="blog my-5" id="blog">
+    <div className="blog" id="blog">
       <div className="container my-5">
         <div className="text-center">
           <h1>BLOG</h1>

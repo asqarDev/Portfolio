@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import "./Login.css";
 import AuthContext from "../Context/AuthProvider";
+import { toast } from "react-toastify";
 import axios from "../Api/Axios";
+import AdminPanel from "../ProfileSaidbar/AdminPanel";
 const LOGIN_URL = "/auth";
 export default function Login() {
   const { setAuth } = useContext(AuthContext);
@@ -25,16 +27,48 @@ export default function Login() {
     { username: "developer", password: "testing321" },
   ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const toastClick = () => {
+    toast.success("🦄 Tabriklayman siz ro'yxatdan o'tdiz", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+  const toastClick2 = () => {
+    toast.error("🦄 Iltimos username yoki parolni to'g'ri kiritng ", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+  const handleSubmit = () => {
+    var username = document.querySelector("#username").value;
+    var password = document.querySelector("#password").value;
 
-    users.map((item) =>
-      item.username === setUser(e) && item.password === setPwd(e)
-        ? (setSuccess(true), console.log("sss"))
-        : "NO Success"
-    );
-
-    console.log(e.target.value);
+    if (users[0].username === username && users[0].password === password) {
+      setSuccess(true);
+      toastClick();
+      // window.localStorage.setItem(success);
+    } else if (
+      users[1].username === username &&
+      users[1].password === password
+    ) {
+      toastClick();
+      // window.localStorage.setItem(success);
+      setSuccess(true);
+    } else if (username === 0 && password === 0) {
+      alert("Iltimos username va parolni kiriting");
+    } else {
+      toastClick2();
+    }
   };
 
   //   const handleSubmit = async (e) => {
@@ -73,11 +107,7 @@ export default function Login() {
     <>
       {success ? (
         <section>
-          <h1>You are logged in! </h1>
-          <br />
-          <p>
-            <a href="#2">Go to Home</a>
-          </p>
+          <AdminPanel/>
         </section>
       ) : (
         <div className="bg_login">
@@ -85,19 +115,21 @@ export default function Login() {
             <div className="row justify-content-center align-items-center">
               <div className="col-lg-6">
                 <div className="card p-4">
-                  <p
+                  {/* <p
                     ref={errRef}
-                    className={errMsg ? "errmsg" : "offscreen"}
+                    className={success ? "disabled" : "disabled"}
                     aria-live="assertive"
                   >
-                    {errMsg}
-                  </p>
-                  <h1 className="text-center">Hello Login</h1>
+                    kechirasi username yoki parol xato
+                  </p> */}
+                  <h1 className="text-center" style={{ color: "white" }}>
+                    Hello Login
+                  </h1>
                   <div className="">
                     <form onSubmit={handleSubmit}>
                       <div className="mb-3">
                         <label for="username" className="form-label">
-                          UserName
+                          Username
                         </label>
                         <input
                           type="text"
@@ -127,7 +159,11 @@ export default function Login() {
                       </div>
 
                       <div className="d-flex justify-content-end w-100">
-                        <button type="submit" className="btn btn-primary">
+                        <button
+                          type="button"
+                          className="btn btn-success py-2 px-3"
+                          onClick={handleSubmit}
+                        >
                           Submit
                         </button>
                       </div>

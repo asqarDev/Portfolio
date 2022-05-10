@@ -4,6 +4,10 @@
   background-size: 100% 100%;
   width: 100%;
   height: auto;
+
+}
+.bg_footer h3{
+  color: white;
 }
 .bg_fon {
   background-color: rgb(32, 31, 31);
