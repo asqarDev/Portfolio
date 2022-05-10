@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AuthProvider>
-      {/* <ToastContainer
+      <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -29,8 +29,8 @@ root.render(
       />
       
       <ToastContainer />
-      <Routers /> */}
-      <AdminPanel/>
+      <Routers />
+      {/* <AdminPanel/> */}
     </AuthProvider>
     {/* <App /> */}
   </React.StrictMode>
