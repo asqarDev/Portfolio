@@ -1,21 +1,20 @@
-import { Breadcrumb, Layout, Menu } from "antd";
+import { Breadcrumb, Layout, Menu, Icon } from "antd";
 import "./AdminPanel.css";
 import React, { useState } from "react";
-import { UserOutlined, ProfileOutlined, MailOutlined } from "@ant-design/icons";
 import {
-  BrowserRouter,
-  Link,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+  UserOutlined,
+  ProfileOutlined,
+  UsergroupAddOutlined,
+} from "@ant-design/icons";
 import Users from "./Users";
+import { Link, Route, Routes } from "react-router-dom";
+import Profile from "./Profile";
 const { Sider, Header, Content, Footer } = Layout;
 export default function AdminPanel() {
-  const [collapsed, setCollaosed] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
   // const location = useLocation();
   const onCollapse = () => {
-    setCollaosed(!collapsed);
+    setCollapsed(!collapsed);
   };
   return (
     <div className="">
@@ -39,16 +38,29 @@ export default function AdminPanel() {
               className="AdminMenu"
               // defaultSelectedKeys={[location.pathname]}
             >
-              <Menu.Item>
+              <Menu.Item key="/user">
                 <UserOutlined />
                 <span>User</span>
-                {/* <Link to="/"></Link> */}
+
+                {/* <Link to="/user">User</Link> */}
               </Menu.Item>
               <Menu.Item>
                 <ProfileOutlined />
                 <span>Profile</span>
+
+                {/* <Link to='/profile'>
+                  <span>Profile</span>
+                </Link> */}
               </Menu.Item>
-              <Menu.SubMenu title="Our Team">
+              <Menu.SubMenu
+                title={
+                  <span>
+                    {/* <Icon type="user" /> */}
+                    <UsergroupAddOutlined />
+                    <span>Our Team</span>
+                  </span>
+                }
+              >
                 <Menu.Item>item new</Menu.Item>
               </Menu.SubMenu>
             </Menu>
@@ -69,15 +81,14 @@ export default function AdminPanel() {
               className="site-layout-background"
               style={{ padding: 24, minHeight: 360 }}
             >
-              {/* <BrowserRouter>
-                <Routes>
-                  <Route path="/" element={<Users/>}/>
-                </Routes>
-              </BrowserRouter> */}
+              {/* <Routes>
+                <Route path="user" element={<Users />} />
+                <Route path="profile" element={<Profile/>}/>
+              </Routes> */}
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
-            Ant Design ©2022 Created by Ant UED
+            Ant Design ©2022 Mirzayev Asqar
           </Footer>
         </Layout>
       </Layout>

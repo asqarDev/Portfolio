@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef, useContext } from "react";
 import "./Login.css";
 import AuthContext from "../Context/AuthProvider";
 import { toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
+
 import axios from "../Api/Axios";
 import AdminPanel from "../ProfileSaidbar/AdminPanel";
-const LOGIN_URL = "/auth";
+// const LOGIN_URL = "/auth";
 export default function Login() {
   const { setAuth } = useContext(AuthContext);
   const userRef = useRef();
@@ -13,6 +15,8 @@ export default function Login() {
   const [pwd, setPwd] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
+
+  // let history = useHistory();
 
   useEffect(() => {
     userRef.current.focus();
@@ -52,16 +56,18 @@ export default function Login() {
   const handleSubmit = () => {
     var username = document.querySelector("#username").value;
     var password = document.querySelector("#password").value;
-
     if (users[0].username === username && users[0].password === password) {
       setSuccess(true);
       toastClick();
+      // history.push("profile");
       // window.localStorage.setItem(success);
     } else if (
       users[1].username === username &&
       users[1].password === password
     ) {
       toastClick();
+      // history.push("profile");
+
       // window.localStorage.setItem(success);
       setSuccess(true);
     } else if (username === 0 && password === 0) {
@@ -103,13 +109,15 @@ export default function Login() {
   //       errRef.current.focus();
   //     }
   //   };
+
   return (
     <>
-      {success ? (
-        <section>
-          <AdminPanel/>
-        </section>
-      ) : (
+      {
+        success ? (
+          <section>
+            <AdminPanel />
+          </section>
+        ) :
         <div className="bg_login">
           <div className="container loginContainer">
             <div className="row justify-content-center align-items-center">
@@ -174,7 +182,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-      )}
+      }
     </>
   );
 }

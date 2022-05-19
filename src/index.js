@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
@@ -18,7 +16,7 @@ root.render(
     <AuthProvider>
       <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -27,7 +25,7 @@ root.render(
         draggable
         pauseOnHover
       />
-      
+
       <ToastContainer />
       <Routers />
       {/* <AdminPanel/> */}
