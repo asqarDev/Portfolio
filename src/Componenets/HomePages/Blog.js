@@ -24,7 +24,6 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
           <div
             className="col-lg-4 col-md-6"
             data-aos="zoom-in-down"
-            data-aos-duration="2000"
           >
             <div class="card">
               <div style={{ overflow: "hidden" }}>
@@ -67,7 +66,6 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
           <div
             className="col-lg-4 col-md-6"
             data-aos="zoom-in"
-            data-aos-duration="2000"
           >
             <div class="card">
               <div style={{ overflow: "hidden" }}>
@@ -110,7 +108,6 @@ export default function Blog({ name, toastClick, toastClick1, toastClick2 }) {
           <div
             className="col-lg-4 col-md-6"
             data-aos="zoom-in"
-            data-aos-duration="2000"
           >
             <div class="card">
               <div style={{ overflow: "hidden" }}>

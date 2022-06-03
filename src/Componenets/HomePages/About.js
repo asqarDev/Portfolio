@@ -54,7 +54,7 @@ export default function About({ name, profile, email, phone, data }) {
       <div
         className="container my-5 mycontainer"
         data-aos="zoom-in"
-        data-aos-duration="2000"
+        
       >
         <div className="row p-3">
           <div className="col-lg-6 col-md-6 my-2 aboutImg">

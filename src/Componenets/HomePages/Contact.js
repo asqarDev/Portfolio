@@ -31,7 +31,6 @@ export default function Contact({
 
   return (
     <>
-     
       <div className="contact" id="contact">
         <div className="bg_contact">
           <div className="opasiti">
@@ -40,11 +39,7 @@ export default function Contact({
             </div>
             <div className="container my-5 mycontainer">
               <div className="row p-4">
-                <div
-                  className="col-lg-6 col-md-6"
-                  data-aos="zoom-in"
-                  data-aos-duration="2000"
-                >
+                <div className="col-lg-6 col-md-6" data-aos="zoom-in">
                   <div className="py-5">
                     <h2>Send Message Us</h2>
                     <div className="linechiziq"></div>
@@ -99,11 +94,7 @@ export default function Contact({
                     </div>
                   </div>
                 </div>
-                <div
-                  className="col-lg-6 col-md-6 my-5"
-                  data-aos="zoom-in-up"
-                  data-aos-duration="2000"
-                >
+                <div className="col-lg-6 col-md-6 my-5" data-aos="zoom-in-up">
                   <div className="">
                     <h2>Get in Touch</h2>
                     <div className="linechiziq"></div>
@@ -183,7 +174,7 @@ export default function Contact({
           </div>
         </div>
         <div className="xarita container-fluid p-0 m-0">
-          <div className="maps" data-aos="zoom-in" data-aos-duration="2000">
+          <div className="maps" data-aos="zoom-in">
             <Maps />
           </div>
         </div>

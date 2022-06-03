@@ -20,12 +20,7 @@ export default function Service({ profile }) {
           </div>
         </div>
         <div className="row">
-          <div
-            className="col-lg-4 col-md-6"
-            data-aos="zoom-in"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
+          <div className="col-lg-4 col-md-6" data-aos="zoom-in">
             <div
               className="card py-4 px-3"
               style={{ border: "none", borderRadius: "18px" }}
@@ -50,12 +45,7 @@ export default function Service({ profile }) {
               </div>
             </div>
           </div>
-          <div
-            className="col-lg-4 col-md-6"
-            data-aos="zoom-in"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
+          <div className="col-lg-4 col-md-6" data-aos="zoom-in">
             <div
               className="card py-4 px-3"
               style={{ border: "none", borderRadius: "18px" }}
@@ -80,12 +70,7 @@ export default function Service({ profile }) {
               </div>
             </div>
           </div>
-          <div
-            className="col-lg-4 col-md-6"
-            data-aos="zoom-in"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
+          <div className="col-lg-4 col-md-6" data-aos="zoom-in">
             <div
               className="card py-4 px-3"
               style={{ border: "none", borderRadius: "18px" }}
@@ -110,12 +95,7 @@ export default function Service({ profile }) {
               </div>
             </div>
           </div>
-          <div
-            className="col-lg-4 col-md-6"
-            data-aos="zoom-in-right"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
+          <div className="col-lg-4 col-md-6" data-aos="zoom-in-right">
             <div
               className="card py-4 px-3"
               style={{ border: "none", borderRadius: "18px" }}
@@ -140,12 +120,7 @@ export default function Service({ profile }) {
               </div>
             </div>
           </div>
-          <div
-            className="col-lg-4 col-md-6"
-            data-aos="zoom-in"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
+          <div className="col-lg-4 col-md-6" data-aos="zoom-in">
             <div
               className="card py-4 px-3"
               style={{ border: "none", borderRadius: "18px" }}
@@ -170,12 +145,7 @@ export default function Service({ profile }) {
               </div>
             </div>
           </div>
-          <div
-            className="col-lg-4 col-md-6"
-            data-aos="zoom-in"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
-          >
+          <div className="col-lg-4 col-md-6" data-aos="zoom-in">
             <div
               className="card py-4 px-3"
               style={{ border: "none", borderRadius: "18px" }}
@@ -206,12 +176,7 @@ export default function Service({ profile }) {
         <div className="opasiti align-items-center d-flex">
           <div className="container ">
             <div className="row my-5">
-              <div
-                className="col-lg-3 col-md-6"
-                data-aos="zoom-in"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-3 col-md-6" data-aos="zoom-in">
                 <div className=" p-3">
                   <div className="d-flex justify-content-center">
                     <div className="work">
@@ -226,12 +191,7 @@ export default function Service({ profile }) {
                   <h5 className="text-center">Works Complate</h5>
                 </div>
               </div>
-              <div
-                className="col-lg-3 col-md-6"
-                data-aos="zoom-in"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-3 col-md-6" data-aos="zoom-in">
                 <div className=" p-3">
                   <div className="d-flex justify-content-center">
                     <div className="work">
@@ -246,12 +206,7 @@ export default function Service({ profile }) {
                   <h5 className="text-center">Years of Experiance</h5>
                 </div>
               </div>
-              <div
-                className="col-lg-3 col-md-6"
-                data-aos="zoom-in"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-3 col-md-6" data-aos="zoom-in">
                 <div className=" p-3">
                   <div className="d-flex justify-content-center">
                     <div className="work">
@@ -266,12 +221,7 @@ export default function Service({ profile }) {
                   <h5 className="text-center">Total Clients</h5>
                 </div>
               </div>
-              <div
-                className="col-lg-3 col-md-6 "
-                data-aos="zoom-in"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-              >
+              <div className="col-lg-3 col-md-6 " data-aos="zoom-in">
                 <div className=" p-3">
                   <div className="d-flex justify-content-center">
                     <div className="work">

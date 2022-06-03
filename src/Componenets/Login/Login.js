@@ -2,10 +2,10 @@ import React, { useEffect, useState, useRef, useContext } from "react";
 import "./Login.css";
 import AuthContext from "../Context/AuthProvider";
 import { toast } from "react-toastify";
-import { useHistory } from "react-router-dom";
-
-import axios from "../Api/Axios";
+import { BrowserRouter as Router, useNavigate } from "react-router-dom";
 import AdminPanel from "../ProfileSaidbar/AdminPanel";
+import { FiUser } from "react-icons/fi";
+import { RiLockPasswordLine } from "react-icons/ri";
 // const LOGIN_URL = "/auth";
 export default function Login() {
   const { setAuth } = useContext(AuthContext);
@@ -17,6 +17,7 @@ export default function Login() {
   const [success, setSuccess] = useState(false);
 
   // let history = useHistory();
+  let navigate = useNavigate();
 
   useEffect(() => {
     userRef.current.focus();
@@ -59,6 +60,8 @@ export default function Login() {
     if (users[0].username === username && users[0].password === password) {
       setSuccess(true);
       toastClick();
+      navigate("/profile");
+      // return <AdminPanel />;  
       // history.push("profile");
       // window.localStorage.setItem(success);
     } else if (
@@ -66,6 +69,8 @@ export default function Login() {
       users[1].password === password
     ) {
       toastClick();
+      navigate("/profile");
+
       // history.push("profile");
 
       // window.localStorage.setItem(success);
@@ -112,77 +117,78 @@ export default function Login() {
 
   return (
     <>
-      {
-        success ? (
-          <section>
-            <AdminPanel />
-          </section>
-        ) :
-        <div className="bg_login">
-          <div className="container loginContainer">
-            <div className="row justify-content-center align-items-center">
-              <div className="col-lg-6">
-                <div className="card p-4">
-                  {/* <p
+      <div className="bg_login">
+        <div className="container loginContainer">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-lg-4">
+              <div className="card p-4">
+                {/* <p
                     ref={errRef}
                     className={success ? "disabled" : "disabled"}
                     aria-live="assertive"
                   >
                     kechirasi username yoki parol xato
                   </p> */}
-                  <h1 className="text-center" style={{ color: "white" }}>
-                    Hello Login
-                  </h1>
-                  <div className="">
-                    <form onSubmit={handleSubmit}>
-                      <div className="mb-3">
-                        <label for="username" className="form-label">
-                          Username
-                        </label>
-                        <input
-                          type="text"
-                          autofocus
-                          className="form-control"
-                          id="username"
-                          aria-describedby="emailHelp"
-                          ref={userRef}
-                          autoComplete="off"
-                          onChange={(e) => setUser(e.target.value)}
-                          value={user}
-                          required
-                        />
-                      </div>
-                      <div className="mb-3">
-                        <label for="password" className="form-label">
-                          Password
-                        </label>
-                        <input
-                          type="password"
-                          className="form-control"
-                          id="password"
-                          onChange={(e) => setPwd(e.target.value)}
-                          value={pwd}
-                          required
-                        />
-                      </div>
+                <h1 className="text-center">Hello Login</h1>
+                <div className="">
+                  <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                      <label for="username" className="form-label">
+                        Username
+                      </label>
+                      <br />
+                      <span>
+                        <FiUser className="userIcon" />{" "}
+                      </span>
+                      <input
+                        type="text"
+                        autofocus
+                        className=""
+                        id="username"
+                        aria-describedby="emailHelp"
+                        ref={userRef}
+                        autoComplete="off"
+                        onChange={(e) => setUser(e.target.value)}
+                        value={user}
+                        required
+                      />
+                      <div className="chiziq_line"></div>
+                    </div>
+                    <div className="mb-3">
+                      <label for="password" className="form-label">
+                        Password
+                      </label>{" "}
+                      <br />
+                      <span>
+                        <RiLockPasswordLine className="userIcon" />
+                      </span>
+                      <input
+                        type="password"
+                        className=""
+                        id="password"
+                        onChange={(e) => setPwd(e.target.value)}
+                        value={pwd}
+                        required
+                      />
+                      <div className="chiziq_line"></div>
+                    </div>
 
-                      <div className="d-flex justify-content-end w-100">
-                        <button
-                          type="button"
-                          className="btn btn-success py-2 px-3"
-                          onClick={handleSubmit}
-                        >
-                          Submit
-                        </button>
-                      </div>
-                    </form>
-                  </div>
+                    <div className="d-flex justify-content-center w-100">
+                      <button
+                        type="submit"
+                        className="btn btn-primary py-2 px-3"
+                        // onClick={handleSubmit}
+                      >
+                        Login
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      }
+      </div>
     </>
   );
 }

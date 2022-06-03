@@ -1,16 +1,22 @@
 import { Breadcrumb, Layout, Menu, Icon } from "antd";
-import "./AdminPanel.css";
+import { Link, Route, Routes } from "react-router-dom";
 import React, { useState } from "react";
+import logo from "./../../img/busimg.jpg";
 import {
   UserOutlined,
   ProfileOutlined,
   UsergroupAddOutlined,
 } from "@ant-design/icons";
 import Users from "./Users";
-import { Link, Route, Routes } from "react-router-dom";
 import Profile from "./Profile";
-const { Sider, Header, Content, Footer } = Layout;
+import "./AdminPanel.css";
+import dateFormat, { masks } from "dateformat";
+
+const now = new Date();
+
 export default function AdminPanel() {
+  const { Sider, Header, Content, Footer } = Layout;
+
   const [collapsed, setCollapsed] = useState(false);
   // const location = useLocation();
   const onCollapse = () => {
@@ -25,8 +31,12 @@ export default function AdminPanel() {
           onCollapse={onCollapse}
           id="components-layout-demo-side"
         >
-          <div className="logo text-center">
-            <p className="text-center">Logo</p>
+          <div className="topLogo">
+            <div className="logo text-center">
+              <p className="text-center">
+                <img src={logo} alt="" />
+              </p>
+            </div>
           </div>
           <div>
             <Menu
@@ -38,20 +48,19 @@ export default function AdminPanel() {
               className="AdminMenu"
               // defaultSelectedKeys={[location.pathname]}
             >
-              <Menu.Item key="/user">
-                <UserOutlined />
-                <span>User</span>
-
-                {/* <Link to="/user">User</Link> */}
-              </Menu.Item>
-              <Menu.Item>
-                <ProfileOutlined />
-                <span>Profile</span>
-
-                {/* <Link to='/profile'>
+              <Menu.Item key={"/profile"}>
+                <Link to={"/profile"}>
+                  <ProfileOutlined />
                   <span>Profile</span>
-                </Link> */}
+                </Link>
               </Menu.Item>
+              <Menu.Item key="/user">
+                <Link to={"/user"}>
+                  <UserOutlined />
+                  <span>User</span>
+                </Link>
+              </Menu.Item>
+
               <Menu.SubMenu
                 title={
                   <span>
@@ -68,23 +77,20 @@ export default function AdminPanel() {
           </div>
         </Sider>
         <Layout className="site-layout">
-          <Header
-            className="site-layout-background"
-            style={{ padding: 0 }}
-          ></Header>
-          <Content style={{ margin: "0 16px" }}>
-            <Breadcrumb style={{ margin: "16px 0" }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Mirzayev</Breadcrumb.Item>
-            </Breadcrumb>
+          <Header className="site-layout-background" style={{ padding: 0 }}>
+            <div className="layoutHeader">
+              <h6>Server vaqti: {dateFormat(now)}</h6>
+            </div>
+          </Header>
+          <Content style={{ margin: "20px 16px" }}>
             <div
               className="site-layout-background"
-              style={{ padding: 24, minHeight: 360 }}
+              style={{ padding: 24, minHeight: 400 }}
             >
-              {/* <Routes>
-                <Route path="user" element={<Users />} />
-                <Route path="profile" element={<Profile/>}/>
-              </Routes> */}
+              <Routes>
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/user" element={<Users />} />
+              </Routes>
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>

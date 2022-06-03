@@ -18,7 +18,7 @@ export default function Youtube() {
           <div className="row">
             <div className="col-lg-3">
               <button class="pulse" onClick={() => setVisible(true)}>
-                Pulse
+                Get Start video
               </button>
             </div>
           </div>
